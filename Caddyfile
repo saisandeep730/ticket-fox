@@ -1,0 +1,43 @@
+# Site addresses: the primary domain, its www alias, the admin subdomain, and an
+# optional second hostname (DOMAIN_ALT — e.g. the old domain during a migration).
+# DOMAIN_ALT must never be empty: docker-compose defaults it to DOMAIN, because a
+# trailing comma in this list is a Caddyfile syntax error.
+#
+# admin.{$DOMAIN} is served by the same Next.js app. frontend/middleware.ts
+# rewrites every path on that host to /admin, and redirects /admin on the main
+# domain to the subdomain — so the control plane is only reachable here.
+{$DOMAIN}, www.{$DOMAIN}, admin.{$DOMAIN}, {$DOMAIN_ALT} {
+	encode zstd gzip
+
+	# API goes straight to FastAPI. Long timeouts because a cold scrape can take
+	# a while and the worker's /api/worker/cycle endpoint runs a full poll.
+	handle /api/* {
+		reverse_proxy backend:8000 {
+			transport http {
+				read_timeout 120s
+			}
+		}
+	}
+
+	handle /health {
+		reverse_proxy backend:8000
+	}
+
+	# Operator-only WhatsApp pairing page. The gateway itself rejects any request
+	# whose path secret does not match WHATSAPP_SECRET_KEY, so this is not a
+	# public surface. Remove this block once the device is linked.
+	handle /qr/* {
+		reverse_proxy wppconnect:21465
+	}
+
+	# The pairing page lives on this origin, so its relative fetches would hit
+	# /api/* (the backend). The gateway mirrors its API under /qr-api/* for it.
+	handle /qr-api/* {
+		reverse_proxy wppconnect:21465
+	}
+
+	# Everything else is the Next.js app.
+	handle {
+		reverse_proxy frontend:3000
+	}
+}

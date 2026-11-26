@@ -1,0 +1,1 @@
+"""Availability package: state machine + normalized result helpers."""

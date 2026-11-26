@@ -1,0 +1,130 @@
+/* Hallmark · tokens · theme: brand (TicketFox) · redesign: full
+ * read from frontend/DESIGN.md and frontend/tailwind.config.js, never from memory
+ * paper: oklch(0.13 0.008 265) · accent: oklch(0.70 0.20 48) · display: Outfit · body: Plus Jakarta Sans */
+
+:root {
+  /* ---- the shared scale (written by the scaffold) ---- */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 144px;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-display-s: clamp(2.25rem, 4vw + 0.5rem, 3.75rem);
+  --text-display: clamp(2.75rem, 5vw + 1rem, 5.25rem);
+  --text-section: clamp(2rem, 2.5vw + 1rem, 3.5rem);
+  --text-title: clamp(1.25rem, 0.75vw + 0.875rem, 1.625rem);
+  --text-lead: clamp(1.125rem, 0.35vw + 1rem, 1.375rem);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --container: 1440px;
+  --gutter: 64px;
+  --gap-columns: 32px;
+  --section-gap-s: 120px;
+  --section-gap: 144px;
+  --section-gap-l: 176px;
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-sticky-nav: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  /* ---- the brand: obsidian ladder, fox ladder (frontend/tailwind.config.js:11) ---- */
+  --color-paper: oklch(0.13 0.008 265);
+  /* #06070a  obsidian-950 */
+  --color-paper-2: oklch(0.155 0.010 265);
+  /* #090a0f  obsidian-900 */
+  --color-paper-3: oklch(0.185 0.012 265);
+  /* #0e1017  obsidian-850 */
+  --color-paper-4: oklch(0.215 0.014 265);
+  /* #13161f  obsidian-800 */
+
+  --color-ink: oklch(0.97 0.005 250);
+  /* #f1f5f9  slate-100 */
+  --color-ink-2: oklch(0.88 0.010 250);
+  /* #cbd5e1  slate-300 */
+  --color-muted: oklch(0.71 0.020 250);
+  /* #94a3b8  slate-400 */
+
+  --color-rule: oklch(0.30 0.014 265);
+  /* rgba(255,255,255,0.12) resolved on paper */
+  --color-rule-soft: oklch(0.24 0.012 265);
+  /* rgba(255,255,255,0.07) resolved on paper */
+
+  --color-accent: oklch(0.70 0.20 48);
+  /* #ff7a00  fox-500 */
+  --color-accent-hover: oklch(0.76 0.17 52);
+  /* #f89146  fox-400 */
+  --color-accent-quiet: oklch(0.62 0.19 45);
+  /* #ea6500  fox-600 */
+  --color-accent-ink: oklch(0.13 0.008 265);
+  /* dark ink on the orange: 8.1:1, white would be 2.6:1 */
+  --color-focus: oklch(0.76 0.17 52);
+  /* fox-400 on paper: 8.4:1 */
+
+  /* ---- secondary accent: restrained violet (never competes with amber) ---- */
+  --color-accent-2: oklch(0.62 0.19 295);
+  /* violet-500-ish, on paper: 5.6:1 */
+  --color-accent-2-hover: oklch(0.68 0.19 295);
+  /* violet-400-ish */
+  --color-accent-2-quiet: oklch(0.62 0.19 295 / 0.14);
+  /* wash for secondary chips/rails */
+  --color-accent-2-ink: oklch(0.98 0.01 295);
+  /* light ink on violet fills */
+
+  --color-success: oklch(0.78 0.15 165);
+  /* #34d399  emerald-400 */
+  --color-success-ring: oklch(0.78 0.15 165 / 0.55);
+  --color-success-ring-out: oklch(0.78 0.15 165 / 0);
+  --color-warning: oklch(0.84 0.16 85);
+  /* #fbbf24  amber-400 */
+  --color-info: oklch(0.78 0.12 230);
+  /* #38bdf8  sky-400 */
+  --color-error: oklch(0.72 0.16 15);
+  /* #fb7185  rose-400 */
+
+  /* ---- the faces (frontend/DESIGN.md:34) ---- */
+  --font-display: var(--font-outfit), "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-jakarta), "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: var(--font-body);
+  --display-weight: 700;
+
+  /* ---- semantic aliases (components use these, never raw obsidian or slate literals) ---- */
+  --surface-canvas: var(--color-paper);
+  --surface-raised: var(--color-paper-2);
+  --surface-sunken: var(--color-paper-3);
+  --surface-overlay: var(--color-paper-4);
+  --text-primary: var(--color-ink);
+  --text-secondary: var(--color-ink-2);
+  --text-muted: var(--color-muted);
+  --border-strong: var(--color-rule);
+  --border-soft: var(--color-rule-soft);
+
+  /* ---- surfaces ---- */
+  --radius-card: 10px;
+  --radius-pill: 999px;
+  --rule-hair: 1px;
+  --shadow-card: 0 1px 0 0 oklch(1 0 0 / 0.04) inset, 0 8px 24px -12px oklch(0 0 0 / 0.6);
+  --shadow-menu: 0 16px 40px -16px oklch(0 0 0 / 0.8);
+  --color-danger-wash: oklch(0.72 0.16 15 / 0.12);
+  --color-scrim: oklch(0.13 0.008 265 / 0.88);
+  --tracking-display: -0.025em;
+}

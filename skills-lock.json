@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "skills": {
+    "charles-accent-heroes": {
+      "source": "LemonFace0309/charles-skills",
+      "sourceType": "github",
+      "skillPath": "skills/charles-accent-heroes/SKILL.md",
+      "computedHash": "62e485d9ddb7d8e5ce12b172dee9d421d65f89e6e86271e51a95e6a89d23a50b"
+    },
+    "charles-arcade-motion": {
+      "source": "LemonFace0309/charles-skills",
+      "sourceType": "github",
+      "skillPath": "skills/charles-arcade-motion/SKILL.md",
+      "computedHash": "e7749ae19003b27568a71f8b51b9f823e56e26f055881b041f103c8119f0eb87"
+    },
+    "charles-claude-editing": {
+      "source": "LemonFace0309/charles-skills",
+      "sourceType": "github",
+      "skillPath": "skills/charles-claude-editing/SKILL.md",
+      "computedHash": "8e32aed6e7fe2eb91736844135883fc7055314946cb4078a66ee2816593c8efb"
+    },
+    "charles-polish": {
+      "source": "LemonFace0309/charles-skills",
+      "sourceType": "github",
+      "skillPath": "skills/charles-polish/SKILL.md",
+      "computedHash": "095fcdcc123737826517a4d80307e06dc1176e4df6d8275c9acd903f55c63dbb"
+    },
+    "charles-storage-cleanup": {
+      "source": "LemonFace0309/charles-skills",
+      "sourceType": "github",
+      "skillPath": "skills/charles-storage-cleanup/SKILL.md",
+      "computedHash": "62027386bc06ee410fc9f31bd7613058b12e24a8f144b484b3d7c1493d2b7848"
+    },
+    "charles-store-screenshots": {
+      "source": "LemonFace0309/charles-skills",
+      "sourceType": "github",
+      "skillPath": "skills/charles-store-screenshots/SKILL.md",
+      "computedHash": "871a596b7dc41a554819b5bc4cc9272749bf59bc309c75e65e33c7ce01450f6e"
+    },
+    "charles-unreasonable-craft": {
+      "source": "LemonFace0309/charles-skills",
+      "sourceType": "github",
+      "skillPath": "skills/charles-unreasonable-craft/SKILL.md",
+      "computedHash": "dba72fc5894095e5991a2af8a5be95735ec82b3d4bd707edb6b165bf44b381eb"
+    },
+    "charles-unslop": {
+      "source": "LemonFace0309/charles-skills",
+      "sourceType": "github",
+      "skillPath": "skills/charles-unslop/SKILL.md",
+      "computedHash": "9b76c0d805eee8c35e4ee02bcaa56148da59ff6a75a477cd5d56acbda7d4d0cd"
+    },
+    "charles-ux-animation": {
+      "source": "LemonFace0309/charles-skills",
+      "sourceType": "github",
+      "skillPath": "skills/charles-ux-animation/SKILL.md",
+      "computedHash": "630bf7a76c7a4de152b3419c5d6135e4fc1b36e7c3af83cfd82b0df2e8f5b07c"
+    }
+  }
+}

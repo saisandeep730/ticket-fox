@@ -1,0 +1,90 @@
+# Python & Backend
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+backend/build/
+backend/dist/
+backend/downloads/
+backend/eggs/
+backend/.eggs/
+backend/lib/
+backend/lib64/
+backend/parts/
+backend/sdist/
+backend/var/
+backend/wheels/
+backend/*.egg-info/
+backend/.installed.cfg
+backend/*.egg
+
+# SQLite Database
+backend/*.db
+backend/*.db-journal
+backend/*.sqlite3
+
+# Logs & Error Outputs
+*.log
+*.err
+backend/server.log
+backend/server.err
+backend/server_smoke.log
+backend/server_smoke.err
+frontend/dev.log
+frontend/dev.err
+
+# Credentials & Environment secrets
+.env
+.env.local
+.env.*.local
+backend/.env
+backend/.env.local
+backend/*firebase-adminsdk*.json
+backend/*serviceAccount*.json
+backend/firebase-service-account.json
+
+# Node & Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+frontend/.turbo/
+frontend/tsconfig.tsbuildinfo
+frontend/next-env.d.ts
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Agent tooling & design scratch (local only)
+.roo/
+.codex/
+.cursor/
+.gemini/
+.hallmark/
+.impeccable/
+.playwright-mcp/
+plans/
+skills-lock.json
+share.bat
+
+# Build & deploy artifacts
+ticket-fox-web-deploy.tar.gz
+*.tar.gz
+
+# Scratch & Archives
+backend/_scratch_*.py
+*.zip
+*.gif
+*.jpg
+!docs/images/*
+Movie-Ticket-Booking-master/
+Movie-Ticket-Watcher-Notifier-V3-main/
+flixorbit-main/
+PROJECT_AUDIT.md

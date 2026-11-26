@@ -1,0 +1,16 @@
+{
+    "name": "ticketfox-whatsapp-gateway",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Minimal wppconnect-compatible WhatsApp REST gateway for TicketFox (Baileys, no Chromium).",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "@whiskeysockets/baileys": "^6.7.0",
+        "express": "^4.19.2",
+        "pino": "^9.4.0",
+        "qrcode": "^1.5.4"
+    }
+}
